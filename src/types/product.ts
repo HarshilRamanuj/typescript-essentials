@@ -21,7 +21,7 @@
 // }
 
 interface Products {
-  id: readonly number;
+  readonly id: number;
   title: string;
   description: string;
   category: string;

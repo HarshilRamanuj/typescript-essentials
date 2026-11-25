@@ -1,11 +1,11 @@
 import type { AsyncState, Paginated } from "../types/api";
-import type { Product, Category } from "../types/product";
+import type { Products, Category } from "../types/product";
 import { FormatExamples } from "./FormatExamples";
 
 export function ProductExamples() {
   // Task 1.1: Product interface example
   console.log("=== Task 1.1: Product Interface ===");
-  const product: Product = {
+  const product: Products = {
     id: 1,
     title: "TS Essentials",
     description: "Learning typescript essentials",
@@ -28,20 +28,20 @@ export function ProductExamples() {
   // Task 1.5: AsyncState discriminated union examples
   console.log("\n=== Task 1.5: AsyncState ===");
 
-  const stateIdle: AsyncState<Product> = { status: "idle" };
+  const stateIdle: AsyncState<Products> = { status: "idle" };
   console.log("Idle state:", stateIdle);
 
-  const stateLoading: AsyncState<Product> = { status: "loading" };
+  const stateLoading: AsyncState<Products> = { status: "loading" };
   console.log("Loading state:", stateLoading);
 
-  const stateSuccess: AsyncState<Product> = {
+  const stateSuccess: AsyncState<Products> = {
     status: "success",
     data: product,
   };
   console.log("Success state:", stateSuccess);
   console.log("Access data (only in success):", stateSuccess.data?.title);
 
-  const stateError: AsyncState<Product> = {
+  const stateError: AsyncState<Products> = {
     status: "error",
     message: "Failed to fetch product",
   };
@@ -49,7 +49,7 @@ export function ProductExamples() {
 
   // Task 1.5: Paginated type example
   console.log("\n=== Task 1.5: Paginated ===");
-  const paginatedProducts: Paginated<Product> = {
+  const paginatedProducts: Paginated<Products> = {
     items: [product],
     total: 100,
     skip: 0,
@@ -59,7 +59,7 @@ export function ProductExamples() {
 
   // Task 1.5: AsyncState with Paginated combination
   console.log("\n=== Task 1.5: AsyncState<Paginated<Product>> ===");
-  const paginatedState: AsyncState<Paginated<Product>> = {
+  const paginatedState: AsyncState<Paginated<Products>> = {
     status: "success",
     data: paginatedProducts,
   };

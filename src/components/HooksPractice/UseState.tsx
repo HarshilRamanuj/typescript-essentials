@@ -15,8 +15,8 @@ const UseState = () => {
     city: "",
     zip: "",
   });
-  const [arr, setArr] = useState([]);
-  const [updateText, setUpdateText] = useState();
+  const [arr, setArr] = useState<Address[]>([]);
+  const [updateText, setUpdateText] = useState("");
 
   const handleExpand = () => {
     // setExpand(expand ? false : true);
@@ -38,7 +38,7 @@ const UseState = () => {
     });
   };
 
-  const handleUpdate = (item) => {
+  const handleUpdate = (item: Address) => {
     console.log(item, "item");
     setAddress(item);
     setUpdateText("update");
@@ -55,7 +55,7 @@ const UseState = () => {
     });
   };
 
-  const handleDelete = (item) => {
+  const handleDelete = (item: Address) => {
     setArr((prev) => {
       console.log(prev, "prev delete");
       const deletedItem = prev.filter((e) => {
