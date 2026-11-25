@@ -1,0 +1,67 @@
+.productCardWrapper {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition:
+    all 0.3s ease;
+  background: white;
+}
+
+.productCardWrapper:hover {
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  transform: translateY(-8px);
+  border-color: #3b82f6;
+}
+
+.cardHead {
+  padding: 18px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+}
+
+.cardHead h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+}
+
+.cardBody {
+  padding: 16px;
+}
+
+.cardBody p {
+  margin: 0 0 12px 0;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-height: 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardBody h4 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.cardFooter {
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.cardFooter h3 {
+  margin: 0;
+  color: #ef4444;
+  font-size: 0.95rem;
+  font-weight: 700;
+}

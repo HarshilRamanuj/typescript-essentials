@@ -1,0 +1,67 @@
+.cardWrapper {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px auto;
+}
+
+.cardWrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cardHead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 24px;
+  color: white;
+}
+
+.cardHead h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cardBody {
+  padding: 24px;
+}
+
+.cardSubtitle {
+  font-size: 14px;
+  color: #718096;
+  margin: 0 0 16px 0;
+}
+
+.cardDescription {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 0;
+}
+
+.cardFooter {
+  padding: 0 24px 24px 24px;
+}
+
+.cardButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.cardButton:hover {
+  opacity: 0.9;
+}
+
+.cardButton:active {
+  transform: scale(0.98);
+}
